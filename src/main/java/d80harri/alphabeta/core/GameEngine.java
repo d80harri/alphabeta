@@ -8,7 +8,6 @@ import d80harri.alphabeta.intfs.IAgent;
 import d80harri.alphabeta.intfs.IPlayer;
 import d80harri.alphabeta.intfs.IPosition;
 import d80harri.alphabeta.intfs.ITurn;
-import d80harri.alphabeta.intfs.IPosition.GameResult;
 
 public class GameEngine {
 	public static class AgentDescription {
@@ -33,7 +32,7 @@ public class GameEngine {
 		}
 	}
 	
-	public GameResult[] startGame() {
+	public double startGame() {
 		positions.clear();
 		while (!position.isGameOver()) {
 			IPlayer playerOnTurn = position.getPlayerOnTurn();

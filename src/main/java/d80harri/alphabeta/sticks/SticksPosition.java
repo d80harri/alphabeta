@@ -61,15 +61,10 @@ public class SticksPosition extends AbstractPosition {
 		return isOver;
 	}
 
-	public GameResult[] gameResults() {
+	public double gameResults() {
 		if (isGameOver()) {
-			GameResult[] gameResults = new GameResult[2];
-			gameResults[0] = new GameResult(this.getPlayerOnTurn(), 0, 1, 0);
-			gameResults[1] = new GameResult(
-					this.getPlayerOnTurn() == AlphaBetaPlayer.MAX ? AlphaBetaPlayer.MIN
-							: AlphaBetaPlayer.MAX, 1, 0, 0);
-			return gameResults;
+			return this.getPlayerOnTurn() == AlphaBetaPlayer.MAX ? +1.0 : -1.0;
 		}
-		return null;
+		return 0.0;
 	}
 }

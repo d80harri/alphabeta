@@ -5,7 +5,25 @@
 	<artifactId>alphabeta</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<dependencies> 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<verbose>true</verbose>
+					<fork>true</fork>
+					<compilerVersion>1.5</compilerVersion>
+					
+					<scource>1.5</scource>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<dependencies>
 		<dependency>
 			<groupId>org.neuroph</groupId>
 			<artifactId>neuroph</artifactId>
